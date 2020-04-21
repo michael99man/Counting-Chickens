@@ -38,12 +38,12 @@ public class Chicken {
 
     public int fight(int bet){
         assert(alive);
-        assert(false);
 
         int roll = 1 + r.nextInt(100);
 
         if(roll <= level){
             level++;
+            level = Math.min(70, level);
             return bet;
         } else {
             alive = false;
